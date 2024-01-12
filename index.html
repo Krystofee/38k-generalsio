@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #game-canvas {
+            border: 1px solid black;
+
+            width: 600px;
+            height: 600px;
+        }
+
+        #score-screen {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .score-hide {
+            display: none;
+        }
+
+        .score-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #stats {
+            text-align: left;
+        }
+
+        td,
+        th {
+            padding: 0.5rem 1rem;
+        }
+
+        tr:nth-child(1) {
+            background-color: #f7f7f7;
+        }
+
+        tr:nth-child(2) {
+            background-color: #eee;
+        }
+
+        tr:nth-child(4) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Generals.io <small style="color: gray;">copy</small></h1>
+        <div style="position: relative;">
+            <canvas id="game-canvas"></canvas>
+            <div id="score-screen" class="score-hide"></div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Army</th>
+                    <th>Squares</th>
+                </tr>
+            </thead>
+            <tbody id="stats"></tbody>
+        </table>
+    </div>
+
+    <script src="./game.js" />
+</body>
+
+</html>
